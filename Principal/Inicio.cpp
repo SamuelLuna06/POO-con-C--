@@ -9,10 +9,12 @@ class Inicio{
 
 int main(){
 
-    Persona usuario;
+    Persona usuario1;
 
-    usuario.pedirDatos();
-    usuario.calcularImc();
+    usuario1.pedirDatos();
+    usuario1.mostrarDatos();
+    usuario1.calcularImc();
+    usuario1.mayorEdad();
 
     return 0;
 }

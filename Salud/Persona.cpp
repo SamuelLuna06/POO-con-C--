@@ -4,7 +4,8 @@ using namespace std;
 
 class Persona{
 
-    public:
+    private:
+
         int peso;
         int edad;
         int numeroDocumento;
@@ -23,49 +24,49 @@ class Persona{
     
     void pedirDatos(){
         cout << "Ingresa tu tipo de documento:" << endl;
-        cin >> tipoDocumento;
+        cin >> this -> tipoDocumento;
         cout << "Ingresa tu numero de documento: " << endl;
-        cin >> numeroDocumento;
+        cin >> this -> numeroDocumento;
         cout << "Ingresa tu nombre: " << endl;
-        cin >> nombre;
+        cin >> this -> nombre;
         cout << "Ingresa tu apellido: " << endl;
-        cin >> apellido;
+        cin >> this -> apellido;
         cout << "Ingresa tu peso en kilogramos: " << endl;
-        cin >> peso;
+        cin >> this -> peso;
         cout << "Ingresa tu estatura en metros: " << endl;
-        cin >> estatura;
+        cin >> this -> estatura;
         cout << "Ingresa tu edad: " << endl;
-        cin >> edad;
+        cin >> this -> edad;
         cout << "Ingresa tu sexo: " << endl;
-        cin >> sexo;
+        cin >> this -> sexo;
     }
 
     void mostrarDatos(){
         cout << "Los datos del usuario son los siguientes: " << endl;
-        cout << "Tipo de documento: " << tipoDocumento << endl;
-        cout << "Numero de documento: " << numeroDocumento << endl;
-        cout << "Nombre: " << nombre << endl;
-        cout << "Apellido: " << apellido << endl;
-        cout << "Peso: " << peso << endl;
-        cout << "Estatura: " << estatura << endl;
-        cout << "Edad: " << edad << endl;
-        cout << "Sexo: " << sexo << endl;
+        cout << "Tipo de documento: " << this -> tipoDocumento << endl;
+        cout << "Numero de documento: " << this -> numeroDocumento << endl;
+        cout << "Nombre: " << this -> nombre << endl;
+        cout << "Apellido: " << this -> apellido << endl;
+        cout << "Peso: " << this -> peso << endl;
+        cout << "Estatura: " << this -> estatura << endl;
+        cout << "Edad: " << this -> edad << endl;
+        cout << "Sexo: " << this -> sexo << endl;
     }
 
     void calcularImc(){
-        IMC = peso/(estatura*estatura);
+        this -> IMC = this -> peso/(this -> estatura * this -> estatura);
         
-        if(IMC < 20){
+        if(this -> IMC < 20){
             cout << "Su peso esta por debajo de lo ideal." << endl;
-        }else if(20 <= IMC and IMC <= 25){
+        }else if(20 <= this -> IMC and this -> IMC <= 25){
             cout << "Su peso esta dentro de lo ideal." << endl;
-        }else if(25 < IMC){
+        }else if(25 < this -> IMC){
             cout << "Su peso esta por encima de lo ideal." << endl;
         }
     }
 
     void mayorEdad(){
-        if(edad < 18){
+        if(this -> edad < 18){
             cout << "El usuario es menor de edad." << endl;
         }else{
             cout << "El usuario es mayor de edad." << endl;
@@ -73,14 +74,3 @@ class Persona{
     }
 };
 
-int main(){
-
-    Persona usuario1;
-
-    usuario1.pedirDatos();
-    usuario1.mostrarDatos();
-    usuario1.calcularImc();
-    usuario1.mayorEdad();
-
-    return 0;
-}
