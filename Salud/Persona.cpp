@@ -10,7 +10,7 @@ class Persona{
         int edad;
         int numeroDocumento;
         float IMC;
-        double estatura;
+        float estatura;
         string sexo;
         string nombre;
         string apellido;
@@ -20,6 +20,78 @@ class Persona{
 
     Persona (){
 
+    }
+
+    void setPeso(int peso){
+        this -> peso = peso;
+    }
+
+    int getPeso(){
+        return peso;
+    }
+
+    void setEdad(int edad){
+        this -> edad = edad;
+    }
+
+    int getEdad(){
+        return edad;
+    }
+
+    void setNumeroDocumento(int numeroDocumento){
+        this -> numeroDocumento = numeroDocumento;
+    }
+
+    int getNumeroDocumento(){
+        return numeroDocumento;
+    }
+
+    void setIMC(float IMC){
+        this -> IMC = IMC;
+    }
+
+    float getIMC(){
+        return IMC;
+    }
+
+    void setEstatura(float estatura){
+        this -> estatura = estatura;
+    }
+
+    float getEstatura(){
+        return estatura;
+    }
+
+    void setSexo(string sexo){
+        this -> sexo = sexo;
+    }
+
+    string getSexo(){
+        return sexo;
+    }
+
+    void setNombre(string nombre){
+        this -> nombre = nombre;
+    }
+
+    string getNombre(){
+        return nombre;
+    }
+
+    void setApellido(string apellido){
+        this -> apellido = apellido;
+    }
+
+    string getApellido(){
+        return apellido;
+    }
+
+    void setTipoDocumento(string tipoDocumento){
+        this -> tipoDocumento = tipoDocumento;
+    }
+
+    string getTipoDocumento(){
+        return tipoDocumento;
     }
     
     void pedirDatos(){
@@ -53,15 +125,15 @@ class Persona{
         cout << "Sexo: " << this -> sexo << endl;
     }
 
-    void calcularImc(){
+    string calcularImc(){
         this -> IMC = this -> peso/(this -> estatura * this -> estatura);
         
         if(this -> IMC < 20){
-            cout << "Su peso esta por debajo de lo ideal." << endl;
+            return "Peso bajo.";
         }else if(20 <= this -> IMC and this -> IMC <= 25){
-            cout << "Su peso esta dentro de lo ideal." << endl;
+            return "Peso ideal.";
         }else if(25 < this -> IMC){
-            cout << "Su peso esta por encima de lo ideal." << endl;
+            return "Sobrepeso.";
         }
     }
 
@@ -73,4 +145,3 @@ class Persona{
         }
     }
 };
-

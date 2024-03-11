@@ -13,8 +13,18 @@ int main(){
 
     usuario1.pedirDatos();
     usuario1.mostrarDatos();
-    usuario1.calcularImc();
+
+    if(usuario1.calcularImc() == "Peso bajo."){
+        cout << "Tu peso esta por debajo de lo ideal." << endl;
+    }else if(usuario1.calcularImc() == "Peso ideal."){
+        cout << "Tu peso esta dentro de lo ideal." << endl;
+    }else if(usuario1.calcularImc() == "Sobrepeso."){
+        cout << "Tu peso esta por encima de lo ideal." << endl;
+    }
+
     usuario1.mayorEdad();
+
+    usuario1.getNombre();
 
     return 0;
 }
