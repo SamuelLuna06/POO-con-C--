@@ -78,7 +78,7 @@ int main(){
                         daviplata1.consultarSaldo();
                         break;
                     case 7:
-                        cout << "Gracias por usar Nequi." << endl;
+                        cout << "Gracias por usar Daviplata." << endl;
                         break;
                     default:
                         cout << "Opcion no valida." << endl;
