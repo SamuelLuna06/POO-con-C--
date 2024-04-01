@@ -55,8 +55,8 @@ int main(){
         }
     }else if(opcionApp == 2){
         if(daviplata1.iniciarSesion() == true){
-            while(opcion != 6){
-                cout << "1. Recargar saldo.\n2. Bolsillos.\n3. Sacar plata.\n4. Movimientos.\n5. Consultar saldo.\n6. Salir." << endl;
+            while(opcion != 7){
+                cout << "1. Recargar saldo.\n2. Bolsillos.\n3. Sacar plata.\n4. Movimientos.\n5. Pagos.\n6. Consultar saldo.\n7. Salir." << endl;
                 cin >> opcion;
                 switch(opcion){
                     case 1:
@@ -77,7 +77,7 @@ int main(){
                     case 6: 
                         daviplata1.consultarSaldo();
                         break;
-                    case 6:
+                    case 7:
                         cout << "Gracias por usar Nequi." << endl;
                         break;
                     default:
