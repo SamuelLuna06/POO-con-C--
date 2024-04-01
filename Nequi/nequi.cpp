@@ -262,6 +262,7 @@ class Nequi{
         int eleccionSaldo = 0;
         int valorRetirar = 0;
         int confirmacionCodigo = 0;
+        int codigoCajero = 100000+rand()%999999;
 
         cout << "Opciones para sacar:\n1. Cajero. Desde un cajero Bancolombia.\n2. Punto fisico. En corresponsales y puntos nequi." << endl;
         cin >> opcion;
@@ -270,8 +271,6 @@ class Nequi{
 
             cout << "Escoge de donde saldra el dinero:\n1. Disponible.\n2. "<< nombreBolsillo << endl;
             cin >> opcion;
-
-            int codigoCajero = 100000+rand()%999999;
                 
             cout << "Tu codigo para retirar desde un cajero es: " << codigoCajero << endl;
 
@@ -312,8 +311,6 @@ class Nequi{
         }else if(opcion == 2){
             cout << "Escoge de donde saldra el dinero:\n1. Disponible.\n2. "<< nombreBolsillo << endl;
             cin >> opcion;
-
-            int codigoCajero = 100000+rand()%999999;
                 
             cout << "Tu codigo para retirar desde un cajero es: " << codigoCajero << endl;
 
@@ -368,7 +365,6 @@ class Nequi{
     }
 
     void consultarSaldo(){
-
         cout << "Tu saldo en disponible es de $" << saldo << endl;
     }
 
